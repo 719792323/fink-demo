@@ -1,0 +1,12 @@
+#state.backend: rocksdb
+#state.backend.incremental: true
+#state.backend.async: true
+#
+## 自动 LRU 缓存分配
+#state.backend.rocksdb.memory.managed: true
+#
+## 自定义 RocksDB 参数（压缩、memtable、compaction）
+#state.backend.rocksdb.options-factory: com.example.MyRocksDBOptionsFactory
+#
+## Checkpoint 优化（默认是10s），太大了会导致backend频繁的flush
+#execution.checkpointing.interval: 60s
